@@ -1,9 +1,10 @@
 'use strict'
 
-const path = require('path')
+/** @type {import('fastify').FastifyInstance} */
 const fastify = require('fastify')({
   logger: true,
 })
+const path = require('path')
 
 // Register your plugins here
 fastify.register(require('fastify-sensible'), {
