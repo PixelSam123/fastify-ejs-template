@@ -14,7 +14,8 @@ Simply run `npm start` or `npm run dev` according to your needs.
 
 ## Registering plugins
 
-Register the plugins you need after the three plugins (`fastify-sensible`, `fastify-static` and `point-of-view`) already listed in app.js under the comment `// Register your plugins here`
+Register the plugins you need after the three plugins (`fastify-sensible`, `fastify-static` and `point-of-view`) already listed in app.js under the comment `// Register your plugins here`  
+One plugin I recommend is [fastify-helmet](https://github.com/fastify/fastify-helmet) if you want to use Fastify in production.
 
 ## Suggestions!
 
