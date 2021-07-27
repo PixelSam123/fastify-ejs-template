@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const fastify = require('fastify')({
   logger: true,
 })
@@ -7,6 +8,10 @@ const fastify = require('fastify')({
 // Register your plugins here
 fastify.register(require('fastify-sensible'), {
   errorHandler: false,
+})
+fastify.register(require('fastify-static'), {
+  root: path.join(__dirname, 'public'),
+  prefix: '/public/',
 })
 fastify.register(require('point-of-view'), {
   engine: {
@@ -17,7 +22,7 @@ fastify.register(require('point-of-view'), {
 
 // Autoload routes
 fastify.register(require('fastify-autoload'), {
-  dir: require('path').join(__dirname, 'routes'),
+  dir: path.join(__dirname, 'routes'),
 })
 
 // Run the server!
